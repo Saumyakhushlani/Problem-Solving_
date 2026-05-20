@@ -12,3 +12,7 @@ public:
         return nums[l];
     }
 };
+
+int main(){
+    
+}
