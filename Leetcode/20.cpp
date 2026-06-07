@@ -13,6 +13,7 @@ public:
                 if(ch==']' && st.top()=='['){
                     st.pop();
                 }
+                
                 else if(ch=='}' && st.top()=='{'){
                     st.pop();
                 }
