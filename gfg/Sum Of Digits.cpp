@@ -1,0 +1,12 @@
+class Solution {
+  public:
+    int solve(int n) {
+        if (n == 0)
+            return 0;
+        return (n % 10) + solve(n / 10);
+    }
+    int sumOfDigits(int n) {
+        // code here
+        return solve(n);
+    }
+};
