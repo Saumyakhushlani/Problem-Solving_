@@ -11,19 +11,19 @@ public:
         for(int k=0;k<4;k++){
             int row = i+x[k];
             int col = j+y[k];
-            if(validate(row,col,n,m) && visited[row][col]==0 && a[row][col]=='1'){
+            if(validate(row,col,n,m) && visited[row][col]==0 && a[row][col]=='X'){
                 dfs(a,row,col,visited,n,m);
             }
         }
     }
-    int numIslands(vector<vector<char>>& grid) {
+    int countBattleships(vector<vector<char>>& grid) {
         int n = grid.size();
         int m = grid[0].size();
         vector<vector<int>>visited(n,vector<int>(m,0));
         int cnt=0;
         for(int i =0;i<n;i++){
             for(int j=0;j<m;j++){
-                if(visited[i][j]==0 && grid[i][j]=='1'){
+                if(visited[i][j]==0 && grid[i][j]=='X'){
                     dfs(grid,i,j,visited,n,m);
                     cnt++;
                 }
